@@ -1,0 +1,17 @@
+[
+{
+  "directory": "/home/anton20241/painlessMesh_station/build",
+  "command": "/usr/bin/c++  -DBOOST_ALL_NO_LIB -DBOOST_ATOMIC_DYN_LINK -DBOOST_DATE_TIME_DYN_LINK -DBOOST_FILESYSTEM_DYN_LINK -DBOOST_PROGRAM_OPTIONS_DYN_LINK -DBOOST_REGEX_DYN_LINK -DBOOST_SYSTEM_DYN_LINK -DBOOST_THREAD_DYN_LINK -I/home/anton20241/painlessMesh_station/src -I/home/anton20241/painlessMesh_station/libs/TaskScheduler/src -I/home/anton20241/painlessMesh_station/libs/ArduinoJson -I/home/anton20241/painlessMesh_station/libs/painlessMesh/src -I/home/anton20241/painlessMesh_station/libs/uuid/include   -pthread   -std=gnu++14 -o CMakeFiles/painlessMesh_station.dir/src/main.cpp.o -c /home/anton20241/painlessMesh_station/src/main.cpp",
+  "file": "/home/anton20241/painlessMesh_station/src/main.cpp"
+},
+{
+  "directory": "/home/anton20241/painlessMesh_station/build",
+  "command": "/usr/bin/c++  -DBOOST_ALL_NO_LIB -DBOOST_ATOMIC_DYN_LINK -DBOOST_DATE_TIME_DYN_LINK -DBOOST_FILESYSTEM_DYN_LINK -DBOOST_PROGRAM_OPTIONS_DYN_LINK -DBOOST_REGEX_DYN_LINK -DBOOST_SYSTEM_DYN_LINK -DBOOST_THREAD_DYN_LINK -I/home/anton20241/painlessMesh_station/src -I/home/anton20241/painlessMesh_station/libs/TaskScheduler/src -I/home/anton20241/painlessMesh_station/libs/ArduinoJson -I/home/anton20241/painlessMesh_station/libs/painlessMesh/src -I/home/anton20241/painlessMesh_station/libs/uuid/include   -pthread   -std=gnu++14 -o CMakeFiles/painlessMesh_station.dir/src/fake_serial.cpp.o -c /home/anton20241/painlessMesh_station/src/fake_serial.cpp",
+  "file": "/home/anton20241/painlessMesh_station/src/fake_serial.cpp"
+},
+{
+  "directory": "/home/anton20241/painlessMesh_station/build",
+  "command": "/usr/bin/c++  -DBOOST_ALL_NO_LIB -DBOOST_ATOMIC_DYN_LINK -DBOOST_DATE_TIME_DYN_LINK -DBOOST_FILESYSTEM_DYN_LINK -DBOOST_PROGRAM_OPTIONS_DYN_LINK -DBOOST_REGEX_DYN_LINK -DBOOST_SYSTEM_DYN_LINK -DBOOST_THREAD_DYN_LINK -I/home/anton20241/painlessMesh_station/src -I/home/anton20241/painlessMesh_station/libs/TaskScheduler/src -I/home/anton20241/painlessMesh_station/libs/ArduinoJson -I/home/anton20241/painlessMesh_station/libs/painlessMesh/src -I/home/anton20241/painlessMesh_station/libs/uuid/include   -pthread   -std=gnu++14 -o CMakeFiles/painlessMesh_station.dir/libs/painlessMesh/src/scheduler.cpp.o -c /home/anton20241/painlessMesh_station/libs/painlessMesh/src/scheduler.cpp",
+  "file": "/home/anton20241/painlessMesh_station/libs/painlessMesh/src/scheduler.cpp"
+}
+]
