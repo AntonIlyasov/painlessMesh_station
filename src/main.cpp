@@ -46,7 +46,7 @@ int val;
 void sendMessage() ; // Prototype so PlatformIO doesn't complain
 void showNet();
 
-Task taskSendMessage( TASK_SECOND * 10 , TASK_FOREVER, &sendMessage );
+Task taskSendMessage( TASK_SECOND * 5 , TASK_FOREVER, &sendMessage );
 Task taskShowNet( TASK_SECOND * 10 , TASK_FOREVER, &showNet );
 
 void showNet(){
@@ -89,7 +89,7 @@ int main(int ac, char* av[]) {
   using namespace painlessmesh;
   try {
     size_t port = 5555;
-    std::string ip = "192.168.4.1";
+    std::string ip = "10.27.29.1";
     size_t nodeId = runif(0, std::numeric_limits<uint32_t>::max());
     nodeId = 11111;
     std::cout << "station_id = " << nodeId << "\n";
@@ -111,50 +111,21 @@ int main(int ac, char* av[]) {
     std::cout << mesh.sendBroadcast("test_msg") << "\n";
 
     mesh.onReceive([&mesh](uint32_t nodeId, std::string& msg) {
-      std::cout << "{\"event\":\"receive\",\"nodeTime\":"
-                << mesh.getNodeTime() << ",\"time\":\"" << timeToString()
-                << "\""
-                << ",\"nodeId\":" << nodeId << ",\"msg\":\"" << msg << "\"}"
-                << std::endl;
+      std::cout << "base get msg from " << nodeId << " " << msg << "\n";
     });
 
     mesh.onNewConnection([&mesh](uint32_t nodeId) {
-      std::cout << "{\"event\":\"connect\",\"nodeTime\":"
-                << mesh.getNodeTime() << ",\"time\":\"" << timeToString()
-                << "\""
-                << ",\"nodeId\":" << nodeId
-                << ", \"layout\":" << mesh.asNodeTree().toString() << "}"
-                << std::endl;
-    });
-
-    mesh.onDroppedConnection([&mesh](uint32_t nodeId) {
-      std::cout << "{\"event\":\"disconnect\",\"nodeTime\":"
-                << mesh.getNodeTime() << ",\"time\":\"" << timeToString()
-                << "\""
-                << ",\"nodeId\":" << nodeId
-                << ", \"layout\":" << mesh.asNodeTree().toString() << "}"
-                << std::endl;
+      std::cout << "New Connection, nodeId = " << nodeId << "\n";
     });
 
     mesh.onChangedConnections([&mesh]() {
-      std::cout << "{\"event\":\"change\",\"nodeTime\":" << mesh.getNodeTime()
-                << ",\"time\":\"" << timeToString() << "\""
-                << ", \"layout\":" << mesh.asNodeTree().toString() << "}"
-                << std::endl;
+      std::cout << "Changed connections\n" << mesh.subConnectionJson(true).c_str() << "\n";
     });
 
     mesh.onNodeTimeAdjusted([&mesh](int32_t offset) {
-      std::cout << "{\"event\":\"offset\",\"nodeTime\":" << mesh.getNodeTime()
-                << ",\"time\":\"" << timeToString() << "\""
-                << ",\"offset\":" << offset << "}" << std::endl;
+      std::cout << "Adjusted time " << mesh.getNodeTime() << ". Offset = " << offset << "\n";
     });
 
-    mesh.onNodeDelayReceived([&mesh](uint32_t nodeId, int32_t delay) {
-      std::cout << "{\"event\":\"delay\",\"nodeTime\":" << mesh.getNodeTime()
-                << ",\"time\":\"" << timeToString() << "\""
-                << ",\"nodeId\":" << nodeId << ",\"delay\":" << delay << "}"
-                << std::endl;
-    });
 
     userScheduler.addTask( taskSendMessage );
     taskSendMessage.enable();

@@ -4,9 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/anton20241/painlessMesh_station/libs/painlessMesh/src/scheduler.cpp" "/home/anton20241/painlessMesh_station/build/CMakeFiles/painlessMesh_station.dir/libs/painlessMesh/src/scheduler.cpp.o"
-  "/home/anton20241/painlessMesh_station/src/fake_serial.cpp" "/home/anton20241/painlessMesh_station/build/CMakeFiles/painlessMesh_station.dir/src/fake_serial.cpp.o"
-  "/home/anton20241/painlessMesh_station/src/main.cpp" "/home/anton20241/painlessMesh_station/build/CMakeFiles/painlessMesh_station.dir/src/main.cpp.o"
+  "/home/anton20241/devlab/svet/painlessMesh_station/libs/painlessMesh/src/scheduler.cpp" "/home/anton20241/devlab/svet/painlessMesh_station/build/CMakeFiles/painlessMesh_station.dir/libs/painlessMesh/src/scheduler.cpp.o"
+  "/home/anton20241/devlab/svet/painlessMesh_station/src/fake_serial.cpp" "/home/anton20241/devlab/svet/painlessMesh_station/build/CMakeFiles/painlessMesh_station.dir/src/fake_serial.cpp.o"
+  "/home/anton20241/devlab/svet/painlessMesh_station/src/main.cpp" "/home/anton20241/devlab/svet/painlessMesh_station/build/CMakeFiles/painlessMesh_station.dir/src/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
