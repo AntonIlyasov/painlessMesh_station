@@ -760,6 +760,22 @@ stdint.h
 
 ../libs/ArduinoJson/src/ArduinoJson/version.hpp
 
+../libs/TaskScheduler/src/TaskScheduler.h
+Arduino.h
+-
+TaskSchedulerDeclarations.h
+../libs/TaskScheduler/src/TaskSchedulerDeclarations.h
+avr/sleep.h
+-
+avr/power.h
+-
+user_interface.h
+../libs/TaskScheduler/src/user_interface.h
+libmaple/pwr.h
+-
+libmaple/scb.h
+-
+
 ../libs/TaskScheduler/src/TaskSchedulerDeclarations.h
 stddef.h
 -
@@ -1054,7 +1070,7 @@ boost/uuid/detail/uuid_x86.ipp
 boost/uuid/detail/uuid_generic.ipp
 -
 
-/home/anton20241/devlab/svet/painlessMesh_station/src/Arduino.h
+../src/Arduino.h
 sys/time.h
 -
 unistd.h
@@ -1064,15 +1080,51 @@ TaskSchedulerDeclarations.h
 ArduinoJson.h
 -
 boost/asynctcp.hpp
-/home/anton20241/devlab/svet/painlessMesh_station/src/boost/asynctcp.hpp
+../src/boost/asynctcp.hpp
 fake_serial.hpp
-/home/anton20241/devlab/svet/painlessMesh_station/src/fake_serial.hpp
+../src/fake_serial.hpp
 
-/home/anton20241/devlab/svet/painlessMesh_station/src/fake_serial.hpp
+../src/fake_serial.hpp
 iostream
 -
 
-/home/anton20241/devlab/svet/painlessMesh_station/src/main.cpp
+/home/anton20241/painlessMesh_station/libs/painlessMesh/src/painlessTaskOptions.h
+
+/home/anton20241/painlessMesh_station/libs/painlessMesh/src/scheduler.cpp
+painlessTaskOptions.h
+/home/anton20241/painlessMesh_station/libs/painlessMesh/src/painlessTaskOptions.h
+TaskScheduler.h
+-
+
+/home/anton20241/painlessMesh_station/src/Arduino.h
+sys/time.h
+-
+unistd.h
+-
+TaskSchedulerDeclarations.h
+-
+ArduinoJson.h
+-
+boost/asynctcp.hpp
+/home/anton20241/painlessMesh_station/src/boost/asynctcp.hpp
+fake_serial.hpp
+/home/anton20241/painlessMesh_station/src/fake_serial.hpp
+
+/home/anton20241/painlessMesh_station/src/fake_serial.cpp
+cstring
+-
+iomanip
+-
+iostream
+-
+fake_serial.hpp
+/home/anton20241/painlessMesh_station/src/fake_serial.hpp
+
+/home/anton20241/painlessMesh_station/src/fake_serial.hpp
+iostream
+-
+
+/home/anton20241/painlessMesh_station/src/main.cpp
 algorithm
 -
 boost/algorithm/hex.hpp
@@ -1084,17 +1136,17 @@ iostream
 iterator
 -
 Arduino.h
-/home/anton20241/devlab/svet/painlessMesh_station/src/Arduino.h
+/home/anton20241/painlessMesh_station/src/Arduino.h
 painlessmesh/protocol.hpp
-/home/anton20241/devlab/svet/painlessMesh_station/src/painlessmesh/protocol.hpp
+/home/anton20241/painlessMesh_station/src/painlessmesh/protocol.hpp
 painlessmesh/mesh.hpp
-/home/anton20241/devlab/svet/painlessMesh_station/src/painlessmesh/mesh.hpp
+/home/anton20241/painlessMesh_station/src/painlessmesh/mesh.hpp
 painlessMesh.h
-/home/anton20241/devlab/svet/painlessMesh_station/src/painlessMesh.h
+/home/anton20241/painlessMesh_station/src/painlessMesh.h
 painlessmesh/connection.hpp
-/home/anton20241/devlab/svet/painlessMesh_station/src/painlessmesh/connection.hpp
+/home/anton20241/painlessMesh_station/src/painlessmesh/connection.hpp
 plugin/performance.hpp
-/home/anton20241/devlab/svet/painlessMesh_station/src/plugin/performance.hpp
+/home/anton20241/painlessMesh_station/src/plugin/performance.hpp
 boost/date_time.hpp
 -
 boost/program_options.hpp
@@ -1108,9 +1160,9 @@ limits
 random
 -
 ota.hpp
-/home/anton20241/devlab/svet/painlessMesh_station/src/ota.hpp
+/home/anton20241/painlessMesh_station/src/ota.hpp
 
-/home/anton20241/devlab/svet/painlessMesh_station/src/ota.hpp
+/home/anton20241/painlessMesh_station/src/ota.hpp
 boost/uuid/detail/md5.hpp
 -
 

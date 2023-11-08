@@ -44,10 +44,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/anton20241/devlab/svet/painlessMesh_station
+CMAKE_SOURCE_DIR = /home/anton20241/painlessMesh_station
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/anton20241/devlab/svet/painlessMesh_station/build
+CMAKE_BINARY_DIR = /home/anton20241/painlessMesh_station/build
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -74,14 +74,14 @@ clean: CMakeFiles/painlessMesh_station.dir/clean
 CMakeFiles/painlessMesh_station.dir/all:
 	$(MAKE) -f CMakeFiles/painlessMesh_station.dir/build.make CMakeFiles/painlessMesh_station.dir/depend
 	$(MAKE) -f CMakeFiles/painlessMesh_station.dir/build.make CMakeFiles/painlessMesh_station.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/anton20241/devlab/svet/painlessMesh_station/build/CMakeFiles --progress-num=1,2,3,4 "Built target painlessMesh_station"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/anton20241/painlessMesh_station/build/CMakeFiles --progress-num=1,2,3,4 "Built target painlessMesh_station"
 .PHONY : CMakeFiles/painlessMesh_station.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/painlessMesh_station.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/anton20241/devlab/svet/painlessMesh_station/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/anton20241/painlessMesh_station/build/CMakeFiles 4
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/painlessMesh_station.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/anton20241/devlab/svet/painlessMesh_station/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/anton20241/painlessMesh_station/build/CMakeFiles 0
 .PHONY : CMakeFiles/painlessMesh_station.dir/rule
 
 # Convenience name for target.
