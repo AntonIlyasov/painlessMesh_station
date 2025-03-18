@@ -54,10 +54,17 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
+<<<<<<< HEAD
 CMAKE_SOURCE_DIR = /home/anton202/devlab/svet/painlessMesh_station
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /home/anton202/devlab/svet/painlessMesh_station/build
+=======
+CMAKE_SOURCE_DIR = /home/anton20241/painlessMesh_station
+
+# The top-level build directory on which CMake was run.
+CMAKE_BINARY_DIR = /home/anton20241/painlessMesh_station/build
+>>>>>>> 4de480d4f8044e8e249c87282537fc61e8e75549
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -82,6 +89,7 @@ clean: CMakeFiles/camera.dir/clean
 # Target rules for target CMakeFiles/server.dir
 
 # All Build rule for target.
+<<<<<<< HEAD
 CMakeFiles/server.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/server.dir/build.make CMakeFiles/server.dir/build
@@ -94,6 +102,20 @@ CMakeFiles/server.dir/rule: cmake_check_build_system
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/server.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/anton202/devlab/svet/painlessMesh_station/build/CMakeFiles 0
 .PHONY : CMakeFiles/server.dir/rule
+=======
+CMakeFiles/painlessMesh_station.dir/all:
+	$(MAKE) -f CMakeFiles/painlessMesh_station.dir/build.make CMakeFiles/painlessMesh_station.dir/depend
+	$(MAKE) -f CMakeFiles/painlessMesh_station.dir/build.make CMakeFiles/painlessMesh_station.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/anton20241/painlessMesh_station/build/CMakeFiles --progress-num=1,2,3,4 "Built target painlessMesh_station"
+.PHONY : CMakeFiles/painlessMesh_station.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/painlessMesh_station.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/anton20241/painlessMesh_station/build/CMakeFiles 4
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/painlessMesh_station.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/anton20241/painlessMesh_station/build/CMakeFiles 0
+.PHONY : CMakeFiles/painlessMesh_station.dir/rule
+>>>>>>> 4de480d4f8044e8e249c87282537fc61e8e75549
 
 # Convenience name for target.
 server: CMakeFiles/server.dir/rule

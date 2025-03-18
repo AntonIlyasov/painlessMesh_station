@@ -57,10 +57,17 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
+<<<<<<< HEAD
 CMAKE_SOURCE_DIR = /home/anton202/devlab/svet/painlessMesh_station
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /home/anton202/devlab/svet/painlessMesh_station/build
+=======
+CMAKE_SOURCE_DIR = /home/anton20241/painlessMesh_station
+
+# The top-level build directory on which CMake was run.
+CMAKE_BINARY_DIR = /home/anton20241/painlessMesh_station/build
+>>>>>>> 4de480d4f8044e8e249c87282537fc61e8e75549
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -132,9 +139,15 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
+<<<<<<< HEAD
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/anton202/devlab/svet/painlessMesh_station/build/CMakeFiles /home/anton202/devlab/svet/painlessMesh_station/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/anton202/devlab/svet/painlessMesh_station/build/CMakeFiles 0
+=======
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/anton20241/painlessMesh_station/build/CMakeFiles /home/anton20241/painlessMesh_station/build/CMakeFiles/progress.marks
+	$(MAKE) -f CMakeFiles/Makefile2 all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/anton20241/painlessMesh_station/build/CMakeFiles 0
+>>>>>>> 4de480d4f8044e8e249c87282537fc61e8e75549
 .PHONY : all
 
 # The main clean target

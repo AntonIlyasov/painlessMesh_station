@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /home/anton202/devlab/svet/painlessMesh_station/build/CMakeFiles/server.dir
 /home/anton202/devlab/svet/painlessMesh_station/build/CMakeFiles/client.dir
 /home/anton202/devlab/svet/painlessMesh_station/build/CMakeFiles/camera.dir
@@ -7,3 +8,12 @@
 /home/anton202/devlab/svet/painlessMesh_station/build/CMakeFiles/install.dir
 /home/anton202/devlab/svet/painlessMesh_station/build/CMakeFiles/install/local.dir
 /home/anton202/devlab/svet/painlessMesh_station/build/CMakeFiles/install/strip.dir
+=======
+/home/anton20241/painlessMesh_station/build/CMakeFiles/install/local.dir
+/home/anton20241/painlessMesh_station/build/CMakeFiles/install.dir
+/home/anton20241/painlessMesh_station/build/CMakeFiles/list_install_components.dir
+/home/anton20241/painlessMesh_station/build/CMakeFiles/rebuild_cache.dir
+/home/anton20241/painlessMesh_station/build/CMakeFiles/edit_cache.dir
+/home/anton20241/painlessMesh_station/build/CMakeFiles/install/strip.dir
+/home/anton20241/painlessMesh_station/build/CMakeFiles/painlessMesh_station.dir
+>>>>>>> 4de480d4f8044e8e249c87282537fc61e8e75549

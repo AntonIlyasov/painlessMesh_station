@@ -3,6 +3,9 @@
 #include <boost/filesystem.hpp>
 #include <iostream>
 #include <iterator>
+#include <cpr/cpr.h>
+#include <chrono>
+#include "json.hpp"
 
 #include "Arduino.h"
 
@@ -17,6 +20,7 @@ ESPClass ESP;
 
 // TODO Should not be needed anymore in versions after 1.4.9 
 using namespace painlessmesh;
+using namespace nlohmann;
 
 #include "painlessMesh.h"
 #include "painlessmesh/connection.hpp"
@@ -85,6 +89,34 @@ uint32_t runif(uint32_t from, uint32_t to) {
   return distribution(gen);
 }
 
+bool post_event(uint8_t id, uint8_t state, uint8_t status) {
+
+  std::chrono::high_resolution_clock::time_point current_unix_time = std::chrono::high_resolution_clock::now();
+  std::time_t t_c = std::chrono::system_clock::to_time_t(current_unix_time);
+  std::string timestring = std::ctime(&t_c);
+  
+  json data = { {"time", timestring}, 
+                {"data",{
+                  {"id", id},
+                  {"state", state},
+                  {"status",status}
+                }}
+              };
+
+  cpr::Response response =  cpr::Post(cpr::Url("http://185.241.68.155:8801/send_data"/*"http://www.httpbin.org/post"*/), 
+                            cpr::Body(data.dump()),
+                            cpr::Header{{"Content-Type", "application/json"}});
+
+  if (response.status_code == 200) {
+    return true;
+  } else {
+    std::cout << "\nresponse code ERROR: " << response.status_code  << std::endl;
+    std::cout << timestring  << std::endl;
+    std::cout << response.text  << std::endl;
+  }
+  return false;
+}
+
 int main(int ac, char* av[]) {
   using namespace painlessmesh;
   try {
@@ -128,6 +160,11 @@ int main(int ac, char* av[]) {
     taskSendMessage.enable();
     taskShowNet.enable();
     
+    /*======================POST========================*/
+    /*======================POST========================*/
+    if (!post_event(11,22,33)) exit(0);
+    /*======================POST========================*/
+    /*======================POST========================*/
     while (true) {
       mesh.update();
       io_service.poll();

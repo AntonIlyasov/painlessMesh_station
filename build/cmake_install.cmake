@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # Install script for directory: /home/anton202/devlab/svet/painlessMesh_station
+=======
+# Install script for directory: /home/anton20241/painlessMesh_station
+>>>>>>> 4de480d4f8044e8e249c87282537fc61e8e75549
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -49,6 +53,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/server"
          RPATH "")
   endif()
+<<<<<<< HEAD
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE FILES "/home/anton202/devlab/svet/painlessMesh_station/build/server")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/server" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/server")
@@ -56,6 +61,11 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/server"
          OLD_RPATH "/usr/local/lib:"
          NEW_RPATH "")
+=======
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE FILES "/home/anton20241/painlessMesh_station/build/painlessMesh_station")
+  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/painlessMesh_station" AND
+     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/painlessMesh_station")
+>>>>>>> 4de480d4f8044e8e249c87282537fc61e8e75549
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/server")
     endif()
@@ -90,5 +100,9 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
+<<<<<<< HEAD
 file(WRITE "/home/anton202/devlab/svet/painlessMesh_station/build/${CMAKE_INSTALL_MANIFEST}"
+=======
+file(WRITE "/home/anton20241/painlessMesh_station/build/${CMAKE_INSTALL_MANIFEST}"
+>>>>>>> 4de480d4f8044e8e249c87282537fc61e8e75549
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
