@@ -16,8 +16,26 @@ ENDIF(Boost_FOUND)
 
 SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -pthread")
 
-ADD_EXECUTABLE(painlessMesh_station src/main.cpp src/fake_serial.cpp libs/painlessMesh/src/scheduler.cpp)
-target_include_directories(painlessMesh_station PUBLIC src/ libs/TaskScheduler/src/ libs/ArduinoJson/ libs/painlessMesh/src/ libs/uuid/include/)
-TARGET_LINK_LIBRARIES(painlessMesh_station ${Boost_LIBRARIES})
+find_package(OpenCV REQUIRED )
+# server
+ADD_EXECUTABLE(server src/server.cpp src/fake_serial.cpp libs/painlessMesh/src/scheduler.cpp src/base64.cpp src/base64.h)
+target_include_directories(server PUBLIC src/ libs/TaskScheduler/src/ libs/ArduinoJson/ libs/painlessMesh/src/ libs/uuid/include/)
+TARGET_LINK_LIBRARIES(server ${Boost_LIBRARIES})
 
-install(TARGETS painlessMesh_station DESTINATION bin)
+install(TARGETS server DESTINATION bin)
+
+# client
+ADD_EXECUTABLE(client src/client.cpp src/fake_serial.cpp libs/painlessMesh/src/scheduler.cpp src/base64.cpp src/base64.h)
+target_include_directories(client PUBLIC src/ libs/TaskScheduler/src/ libs/ArduinoJson/ libs/painlessMesh/src/ libs/uuid/include/)
+TARGET_LINK_LIBRARIES(client ${Boost_LIBRARIES})
+
+install(TARGETS client DESTINATION bin)
+
+# camera
+
+
+add_executable(camera src/camera.cpp)
+target_link_libraries( camera ${OpenCV_LIBS} )
+target_link_libraries( server ${OpenCV_LIBS} )
+target_link_libraries( client ${OpenCV_LIBS} )
+
